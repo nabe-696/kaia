@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/final.css">
+  
+</head>
+<body>
+  
+
+  <header id="header">
+    <div class="logo">
+      <img src="img/11061.jpg" alt="" width="400px" height="130px">
+
+    </div>
+
+    <nav>
+      <!-- ulでかく -->
+      <ul class="navi">
+
+        <li class="navi-1"><a href="index.html">概要</a></li>  
+        <li class="navi-3"><a href="inn.html">院号</a></li>
+        <li class="navi-2"><a href="way.html">道号</a></li>
+        <li class="navi-4"><a href="kaimyo.html">戒名</a></li>
+        <li class="navi-5"><a href="final.html">最終調整</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <h1>最終調整</h1>
+  <div id="finalall">
+
+  
+  <div class="taxi_main">
+    <div class="round_1"></div>
+        <h2 class="carol_text">(1) <br>あなたの宗派は何？</h2>
+        <ul>
+            <li><p class="reader_text">日蓮宗の場合</p></li>
+            法名の前に「日」をつけるという慣習あり。信仰があつい場合は、こちらの慣習に従う事を推奨するが、信仰が浅い場合には、自分の好きな漢字を入れるのが良い。
+
+
+            <li> <p class="reader_text">浄土真宗の場合</p></li>
+            道号については男性の場合は「釋」、女性の場合は「釋尼」にしなければならない。道号で使った漢字については、戒名の方に入れて調整しよう
+
+            <li> <p class="reader_text">浄土宗の場合</p></li>
+            道号のうち、一字に「誉」を入れるという慣習がある。必ず入れなければいけないというルールではないが、検討頂きたい。
+
+            <li> <p class="reader_text">シンプルに作成したい場合</p></li>
+            浄土真宗・浄土宗の場合は、院号を除いてシンプルに作る事も可能。
+        </ul>   
+
+    </div>
+    <div class="taxi_main">
+      <div class="round_1"></div>
+          <h2 class="carol_text">(2) <br>保存した名前をみてみよう   </h2>
+          <ul>
+              <li><p class="reader_text">院号<br><input type="text" class="inn" id="inoutput"><input type="text" class="inn" id="inoutput2">  
+               </p>
+                
+              </li>
+              <div id="outputInn"></div>
+              
+
+                <!-- Readして、Update、Deleteの機能をここに入れる -->
+
+              <!-- <li> <p class="reader_text">道号<input type="text" id="updateWay"></p></li> -->
+              <li><p class="reader_text">道号 <br><input type="text" class="way" id="kanjiListOutput"><input type="text" class="way" id="displayKanji2">  
+                <input type="text" class="way" id="displayKanjiWay">  </p>
+              <div id="outputWay"></div>
+
+                <!-- Readして、Update、Deleteの機能をここに入れる -->
+
+              <li> <p class="reader_text">戒名(法名)<input type="text" class="kai" id="updateKaimyo"></p></li>
+                 <div id="outputKaimyo"></div>
+
+
+                <!-- Readして、Update、Deleteの機能をここに入れる -->
+
+          </ul>   
+      </div>
+      <div class="taxi_main">
+        <div class="round_1"></div>
+        <h2 class="carol_text">(3) <br>(2)を並び替えてコピペして戒名を完成させよう</h2>
+
+        <!-- インプットを使いながら、縦文字をコピペして戒名を完成させるように実装する -->
+
+        <div class="reader_text_2">
+        <ol>
+         <div class="iro">-院号-</div> 
+            <li><input class="input_all" id="input_1"></li>
+                <li><input class="input_all" id="input_2"></li>
+
+                <!-- <div id="finalInn" class="input_3"></div> -->
+
+                <!-- <li class="inra">院</li> -->
+
+            <div class="iro">-道号-</div> 
+
+                <li><input class="input_all" id="input_3"></li>
+                <li><input class="input_all" id="input_4"></li>
+                
+            <div class="iro">-戒名(法名)-</div> 
+
+                <li><input class="input_all" id="input_5"></li>
+                <li><input class="input_all" id="input_6"></li>
+
+            <div class="iro">-位号-</div> 
+
+                <!-- <li class="a1">居</li>
+                <li class="a2">士</li>
+                <li class="a3">︵</li>
+                <li class="a4">大</li>
+                <li class="a5">姉</li>
+                <li class="a6">︶</li> -->
+            <!-- <div class="iro">※男性の位号：居士/女性の位号：大姉</div>  -->
+
+
+        </ol>
+
+        <button id="kakutei">保存</button>
+        <a href="finish.html" class="susumu">進む</a>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    // jQueryを使用してDOMが読み込まれた後にスクリプトを実行
+    $(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanjiValue = localStorage.getItem('kanjiListValue');
+      $('#kanjiListOutput').val(kanjiValue);
+    });
+
+    $(document).ready(function() {
+  // localStorageから#kanji2のデータを取得して表示
+  let storedKanji2 = localStorage.getItem('kanjiListValue2');
+  if (storedKanji2 !== null) {
+    $('#displayKanji2').val(storedKanji2); // 取得したデータを#displayKanji2に表示
+  }
+
+  // localStorageから#kanjiWayのデータを取得して表示
+  let storedKanjiWay = localStorage.getItem('kanjiWayValue');
+  if (storedKanjiWay !== null) {
+    $('#displayKanjiWay').val(storedKanjiWay); // 取得したデータを#displayKanjiWayに表示
+  }
+});
+
+$(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanjiin1 = localStorage.getItem('kanjiListValuein1');
+      $('#inoutput').val(kanjiin1);
+    });
+
+
+    $(document).ready(function() {
+  // localStorageから#kanji2のデータを取得して表示
+  let kanjiin2 = localStorage.getItem('kanjiListValuein2');
+  if (kanjiin2!== null) {
+    $('#inoutput2').val(kanjiin2); // 取得したデータを#に表示
+  }
+    });
+
+
+    $(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanjikai = localStorage.getItem('kanjiListValuekai');
+      $('#updateKaimyo').val(kanjikai);
+    });
+
+
+    $(document).ready(function() {
+      // '保存📧'ボタンがクリックされた時のイベントハンドラー
+      $('#kakutei').on('click', function() {
+        // テキストフィールドから値を取得
+        let kanjilast1 = $('#input_1').val();
+        let kanjilast2 = $('#input_2').val();
+        let kanjilast3 = $('#input_3').val();
+        let kanjilast4 = $('#input_4').val();
+        let kanjilast5 = $('#input_5').val();
+        let kanjilast6 = $('#input_6').val();
+
+    
+        // 取得した値をlocalStorageに保存
+        localStorage.setItem('kanjilistlast1',kanjilast1 );
+        localStorage.setItem('kanjilistlast2',kanjilast2 );
+        localStorage.setItem('kanjilistlast3',kanjilast3 );
+        localStorage.setItem('kanjilistlast4',kanjilast4 );
+        localStorage.setItem('kanjilistlast5',kanjilast5 );
+        localStorage.setItem('kanjilistlast6',kanjilast6 );
+        
+
+    
+        // 保存が完了したことをユーザーに通知（必要に応じて）
+        alert('保存されました！');
+      });
+    });
+    </script>
+</body>
+</html>

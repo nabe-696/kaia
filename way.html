@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/way.css">
+</head>
+<body>
+
+
+  <header id="header">
+    <div class="logo">
+      <img src="img/11061.jpg" alt="" width="400px" height="130px">
+
+    </div>
+
+    <nav>
+      <!-- ulでかく -->
+      <ul class="navi">
+
+        <li class="navi-1"><a href="index.html">概要</a></li>  
+        
+        <li class="navi-3"><a href="inn.html">院号</a></li>
+        <li class="navi-2"><a href="way.html">道号</a></li>
+        <li class="navi-4"><a href="kaimyo.html">戒名</a></li>
+        <li class="navi-5"><a href="final.html">最終調整</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <h1>道号編</h1>
+  <p>道号は最終調整で二つの文字を選びます。</p>
+    <p>ここでは候補となる字を複数選びましょう</p>
+    <p>まずは（1-1）で年齢に則した文字から気に入った一字を選んでください</p>
+    <p>決まったら（1-2）に入力し、保存しましょう
+    </p>
+    <p>次に（2）にいき、リストから一字選んで保存してください</p>
+    <p>最後に(3)にいき、質問をヒントに漢字を考えてください</p>
+    <p>道号は主に人格や過去の経験に関わる漢字です。考える際、下記にある黄色のメモ帳を利用しましょう</p><br><br>
+
+  <div class="douall">
+    
+      
+        <div class="taxi_main">
+          <div class="round_1"></div>
+              <h2 class="odai">(1-1) <br>年齢に則した1字を選ぼう</h2>
+              <ul>
+                  <li><p class="reader_text">子供の場合</p></li>
+                  「花」「暁」「玉」「幻」「光」「春」「霜」「泡」「霧」「露」
+  
+                  <li> <p class="reader_text">青年の場合</p></li>
+                  「英」「開」「輝」「希」「学」「俊」「純」「青」
+  
+                  <li> <p class="reader_text">壮年の男性場合</p></li>
+                  「威」「覚」「鏡」「義」「賢」「憲」「弦」「源」「元」「厳」「巌」「玄」「功」「興」「剛」「豪」「大」「雄」「隆」
+  
+                  <li> <p class="reader_text">壮年の女性場合</p></li>
+                  「香」「鑑」「好」「孝」「彩」「操」「室」「貞」「妙」「忍」「美」「富」「豊」「芳」「綾」「麗」「蓮」
+  
+                  <li> <p class="reader_text">老年の場合</p></li>
+                  「庵」「翁」「穏」「松」「鶴」「亀」「寿」「福」「融」
+              </ul>   
+              <li> <p class="reader_text">(1-2)コピペして保存</p></li>
+              <input type="text" class="way" id="kanjiList">
+              <button id="sendList" class="send">保存📧</button>
+            
+              
+          
+        </div>
+
+     
+          <div class="taxi_main">
+            <div class="round_1"></div>
+                <h2 class="odai">(2) <br>リストから1字を選ぼう</h2>
+                <ul>
+                    <li><p class="reader_text">自然</p></li>
+                    「海」「岳」「嶽」「岸」「国」「山」「水」「泉」「地」「田」「頂」「谷」「流」
+    
+                    <li> <p class="reader_text">天文・気象</p></li>
+                    「華」「菊」「根」「樹」「竹」「梅」「林」「葉」
+    
+                    <li> <p class="reader_text">植物</p></li>
+                    「華」「菊」「根」「樹」「竹」「梅」「林」「葉」
+    
+                    <li> <p class="reader_text">事物</p></li>
+                    「歌」「書」「窓」「蔵」「船」「石」「灯」「鉄」「文」「宝」「門」「綿」
+                </ul>   
+                
+                <input type="text" class="way" id="kanji2">
+                <button id="sendList2" class="send">保存📧</button>
+                
+            
+
+          </div>
+
+     
+        <div class="taxi_main">
+          <div class="round_1"></div>
+          <h2 class="odai">(3) <br>質問に回答して、他の候補の漢字を考えてみよう</h2>
+
+          <ol>
+              <li>(i)人生を振り返って、今まで住んだ中で思い出の地はどこ？その地の特徴や自然を想像してみて適切な漢字を書き出してみよう
+                  趣味が何か書き出してみよう。</li>
+                  <br>
+              <li>(ii)人生を振り返って、今まで住んだ中で思い出の地はどこ？その地の特徴や自然を想像してみて適切な漢字を書き出してみよう</li>
+                  <br>
+                  <li>(iii)趣味に関連する漢字、趣味を通じてその人を形成したものってなんだろう？そういった事を表現できる漢字はあるだろうか？</li>
+                  <br>
+              <li>(iv)本人はどのような性格、人格だったか振り返ってみよう。何が、そのような性格、人格を形成したと考えられるかも振り返ってみよう！</li>
+              <input type="text" class="way" id="kanjiWay">
+            <button id="sendWay" class="send">保存📧</button>
+          </ol>
+
+        </div>
+      
+
+    
+  </div>
+
+  <!-- <div id="booking" class="ride_section layout_padding">
+    <div class="container">
+      <div class="ride_main">
+
+        
+        
+
+      
+      </div>
+    </div>
+  </div> -->
+
+  <div id="contentall">
+
+  
+  <ul class="content">
+      <li class="item1">
+          <div  class="memoPad">
+              <div>
+              <input type="text" id="key" style="border: none;">
+              </div>  
+              <div>
+              <textarea id="memo" style="border: none;"></textarea>
+              </div>
+              <div class="spc">
+              <button class="addCard" id="save">Save 💾</button>
+              <!-- <button class="addCard" id="clear">Delete 🗑️</button> -->
+              <button class="addCard" id="clear">Delete 🗑️</button>
+              
+  
+          </div>
+       </li>       
+   </ul>
+
+  </div>
+   
+
+
+  <div id="cards" class="cards">
+        <!-- ここに追加データが挿入される -->
+  </div>
+
+  
+ 
+        
+
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  <script>
+
+
+
+//     // jQueryを使用してDOMが読み込まれた後にスクリプトを実行
+//     $(document).ready(function() {
+//       // '保存📧'ボタンがクリックされた時のイベントハンドラー
+//       $('#sendList').on('click', function() {
+//         // テキストフィールドから値を取得
+//         let kanjiValue = $('#kanjiList').val();
+    
+       
+//         localStorage.setItem('kanjiListValue', kanjiValue);
+    
+    
+//         alert('保存されました！');
+//       });
+//     });
+
+//     $(document).ready(function() {
+//   // #kanji2の保存ボタンのイベントハンドラー
+//   $('#sendList2').on('click', function() {
+//     var kanji2Value = $('#kanji2').val(); // #kanji2の値を取得
+//     localStorage.setItem('kanjiListValue2', kanji2Value);
+//     alert('二番目の漢字が保存されました！'); 
+//   });
+
+//   // #kanjiWayの保存ボタンのイベントハンドラー
+//   $('#sendWay').on('click', function() {
+//     let kanjiWayValue = $('#kanjiWay').val(); // #kanjiWayの値を取得
+//     localStorage.setItem('kanjiWayValue', kanjiWayValue); // 
+//     alert('道号が保存されました！'); 
+//   });
+// });
+
+// 
+//     let id_array =[];
+//       let i = 0;
+
+//       $("#save").on("click",function(){
+//       id_array.push(i);
+//       i++;
+//       // console.log(id_array);
+//       let id_num = id_array.length;
+//       // console.log(id_num);
+//       const key = $("#key").val();
+//       const value = $("#memo").val();
+//       localStorage.setItem(key,value);
+//       const html = `<table class="card" id="card${id_num}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+//       $("#cards").append(html);
+//       $("#key").val("");
+//       $("#memo").val("")
+//     //ここから
+//     const deleteButton = `<button class="deleteCard" data-key="${key}">Delete 🗑️</button>`;
+//   const cardHtml = `<table class="card" id="card${id_num}">
+//                       <tr class="title"><td>${key}</td></tr>
+//                       <tr class="detail"><td>${value}</td></tr>
+//                       <tr><td>${deleteButton}</td></tr>
+//                     </table>`;
+//   $("#cards").append(cardHtml);
+
+
+//   });
+
+// //2.clear クリックイベント
+//   $("#clear").on("click",function(){
+//       localStorage.removeItem('memo');
+//       // $("#cards").empty();
+//       $(".card").remove();
+//       location.reload();
+//   });
+
+
+
+// //3.ページ読み込み：保存データ取得表示
+//   // for(let i=0; i<localStorage.length; i++){
+//   //     const key   = localStorage.key(i);
+//   //     const value = localStorage.getItem(key);
+//   //     const html = `<table class="card" id="card${i}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+//   //     $("#cards").append(html);
+//   // }
+
+//   // ページ読み込み時のLocalStorageデータの取得表示
+// for(let i=0; i<localStorage.length; i++){
+//     const key = localStorage.key(i);
+//     // 'kanjiListValue', 'kanjiListValue2', 'kanjiWayValue' のデータを除外する
+//     if(key !== 'kanjiListValue' && key !== 'kanjiListValue2' && key !== 'kanjiWayValue') {
+//         const value = localStorage.getItem(key);
+//         const html = `<table class="card" id="card${i}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+//         $("#cards").append(html);
+//     }
+// }
+
+
+  $(document).ready(function() {
+    // '保存📧'ボタンがクリックされた時のイベントハンドラー
+    $('#sendList').on('click', function() {
+      let kanjiValue = $('#kanjiList').val();
+      localStorage.setItem('kanjiListValue', kanjiValue);
+      alert('保存されました！');
+    });
+
+    $('#sendList2').on('click', function() {
+      var kanji2Value = $('#kanji2').val();
+      localStorage.setItem('kanjiListValue2', kanji2Value);
+      alert('二番目の漢字が保存されました！');
+    });
+
+    $('#sendWay').on('click', function() {
+      let kanjiWayValue = $('#kanjiWay').val();
+      localStorage.setItem('kanjiWayValue', kanjiWayValue);
+      alert('道号が保存されました！');
+    });
+  });
+
+  let id_array = [];
+  let i = 0;
+
+  // Saveメモ
+  $("#save").on("click",function(){
+    id_array.push(i);
+    i++;
+    let id_num = id_array.length;
+    const key = $("#key").val();
+    const value = $("#memo").val();
+    localStorage.setItem(key, value);
+    const html = `<table class="card" id="${key}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+    $("#cards").append(html);
+    $("#key").val("");
+    $("#memo").val("");
+  });
+
+  // Deleteメモ
+  $("#clear").on("click",function(){
+    $(".card").each(function() {
+      const cardId = $(this).attr('id');
+      localStorage.removeItem(cardId);
+      $(this).remove();
+    });
+  });
+
+  // ページ読み込み時のLocalStorageデータの取得表示
+  for(let i=0; i<localStorage.length; i++){
+    const key = localStorage.key(i);
+    if(key !== 'kanjiListValue' && key !== 'kanjiListValue2' && key !== 'kanjiWayValue') {
+      const value = localStorage.getItem(key);
+      const html = `<table class="card" id="${key}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+      $("#cards").append(html);
+    }
+  }
+
+    
+
+
+</script>
+
+</body>
+</html>

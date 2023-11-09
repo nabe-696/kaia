@@ -1,0 +1,87 @@
+.ingoall {
+  display: flex;
+  justify-content: space-around;
+}
+.ingomain1 {
+padding: 10px 100px 10px 10px;
+}
+#contentall {
+  padding-bottom: 0px;
+}
+.content {
+  padding-bottom: 10px;
+}
+
+.select{
+  width: 200px;
+  padding: 10px 25px;
+  margin: 10px 1%;
+  background-color: rgb(228,228,228);
+  border-radius: 5px;
+}
+
+textarea {
+  margin: 10px 0;
+  width: 60%;
+  height: 180px;
+  font-size: 100%;
+  background-color: rgb(243, 241, 181);
+}
+
+#key {
+  margin: 0 0;
+  width: 60%;
+  font-size: 80%;
+  background-color:rgb(243, 241, 181);
+
+}
+
+input {
+  margin: 10px 3%;
+  width: 40%;
+  height: 30px;
+  font-size: 80%;
+  border-radius: 5% 5%/ 10% 10% ;
+}
+
+.memoPad{
+  align-items: flex-start;
+  
+}
+
+.spc{
+  margin: 0px 180px;
+
+  }
+.card{
+  border: 2px solid #053059;
+  border-radius: 5%;
+  width: 30%;
+  margin: 3% 1.5%;
+  background-color: rgba(179, 210, 236, 0.364);
+}
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+td {
+  font-size: 16px;
+  width: 40%;
+  border-radius: 7% 7%/10% 10%  ;
+}
+
+.title{
+  font-weight: bold;
+  height: 35px;
+
+}
+
+.detail{
+  height: 100px;
+}
+.rara {
+  text-align: center;
+}

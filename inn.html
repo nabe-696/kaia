@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/inn.css">
+</head>
+<body>
+  
+
+  <header id="header">
+    <div class="logo">
+      <img src="img/11061.jpg" alt="" width="400px" height="130px">
+
+    </div>
+
+    <nav>
+      <!-- ulでかく -->
+      <ul class="navi">
+
+        <li class="navi-1"><a href="index.html">概要</a></li>  
+        
+        <li class="navi-3"><a href="inn.html">院号</a></li>
+        <li class="navi-2"><a href="way.html">道号</a></li>
+        <li class="navi-4"><a href="kaimyo.html">戒名</a></li>
+        <li class="navi-5"><a href="final.html">最終調整</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  
+  <div class="rara">
+    <h1>院号編</h1>
+    <p>院号は最終調整で二つの文字を選びます。</p>
+    <p>ここでは候補となる字を複数選びましょう</p>
+    <p>まずは（1-1）で院号でよく使われている文字から気に入った文字を選んでください</p>
+    <p>決まったら（1-2）入力し、保存しましょう
+    </p>
+    <p>次に（２）にいき、質問に答えて、漢字を考えてください。</p>
+    <p>院号は主に仕事に関わる漢字です。考える際、下記にある黄色のメモ帳をご利用ください</p>
+    
+  </div>
+
+  
+    <div class="ingoall">
+
+      <div class="ingomain1">
+
+      
+        <div class="round_1"></div>
+        
+          <h2 class="carol_text">(1)例から選ぼう</h2>
+          <ul>
+              <li><p class="reader_text">(1-1)院号でよく使われる漢字</p></li>
+              「安」「英」「恵」「温」「賢」「義」「志」「秀」「純」「俊」「真」「清」「信」「浄」「仁」「静」「誠」「聖」「善」「泰」「達」「智」「忠」「徹」「哲」「満」「優」「勇」「陽」「和」
+
+          </ul>   
+          <li> <p class="reader_text">(1-2)コピペして保存</p></li>
+          <input type="text" class="way" id="textin1">
+          <button id="sendin1" class="send">保存📧</button>
+
+          <!-- <p>次に（２）にいき、質問に答えて、漢字を考えてください。院号は主に仕事に関わる漢字です。下記にある黄色のメモ帳をご利用ください</p> -->
+            
+      </div>
+
+
+          <div class="ingomain2">
+            <div class="round_1"></div>
+            <h2 class="carol_text">（２）質問に回答して、他の候補の漢字を考えてみよう</h2>
+
+            <ol>
+                <li>(i)生前の職業は何だっただろうか。どのような仕事だったか？まずは書き出してみよう！</li>
+                    <br>
+                <li>(ii)仕事の中での思い出深い業績は何だろう。その人が人生を通じて成し遂げた事を示す漢字がないかイメージしながら書き出してみよう！</li>
+                    <br>
+                    <li>(iii)職場での人格、人柄はどのような人だっただろうか？友人や家族に見せる性格の他に、仕事をする際に見せる性格を示す漢字はあるだろうか？</li>
+            </ol>
+
+          </div>
+      
+    </div>
+
+
+
+  <!-- our taxis section end -->
+  <!-- why ride section start -->
+  <!-- <div id="booking" class="ride_section layout_padding">
+    <div class="container">
+      <div class="ride_main">
+
+  <h2 class="ride_text">02-(ii) <span style="color: #f4db31;">メモ作成</span></h2>
+  <h4>上記の質問に沿って、メモを作成する</h4>
+    </div>
+      </div>
+  </div> -->
+  <div class="contentall">
+  
+    <ul class="content">
+        <li class="item1">
+            <div  class="memoPad">
+                <div>
+                <input type="text" id="key" style="border: none;">
+                </div>  
+                <div>
+                <textarea id="memo" style="border: none;"></textarea>
+                </div>
+                <div class="spc">
+                <button class="addCard" id="save">Save 💾</button>
+                <button class="addCard" id="clear">Delete 🗑️</button>
+                </div>             
+          
+        </li>       
+    </ul>
+
+   <div class="hozon">
+
+    
+    <input type="text" class="way" id="textin2">
+    <button id="sendin2" class="send">保存📧</button>
+
+    </div>
+  </div>
+  
+    <div id="cards" class="cards">
+          <!-- ここに追加データが挿入される -->
+    </div>
+
+    
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // '保存📧'ボタンがクリックされた時のイベントハンドラー
+      $('#sendin1').on('click', function() {
+        // テキストフィールドから値を取得
+        let kanjiValuein1 = $('#textin1').val();
+    
+        // 取得した値をlocalStorageに保存
+        localStorage.setItem('kanjiListValuein1', kanjiValuein1);
+    
+        // 保存が完了したことをユーザーに通知（必要に応じて）
+        alert('保存されました！');
+      });
+    });
+    $(document).ready(function() {
+      // '保存📧'ボタンがクリックされた時のイベントハンドラー
+      $('#sendin2').on('click', function() {
+        // テキストフィールドから値を取得
+        let kanjiValuein2 = $('#textin2').val();
+    
+        // 取得した値をlocalStorageに保存
+        localStorage.setItem('kanjiListValuein2', kanjiValuein2);
+    
+        // 保存が完了したことをユーザーに通知（必要に応じて）
+        alert('保存されましたyo！');
+      });
+    });
+
+  </script>
+  <script>
+    // この関数で新たな保存データがカードとして表示されるようにします。
+function displayCard(displayKey, value, storageKey) {
+  const html = `<div class="card" id="${storageKey}">
+                  <div class="title">${displayKey}</div>
+                  <div class="detail">${value}</div>
+                  <button onclick="deleteCard('${storageKey}')">Delete</button>
+                </div>`;
+  $("#cards").append(html);
+}
+
+function deleteCard(storageKey) {
+  localStorage.removeItem(storageKey);
+  $(`#${storageKey}`).remove();
+}
+
+$(document).ready(function() {
+  // メモ保存ボタンのクリックイベント
+  $("#save").on("click", function() {
+    const displayKey = $("#key").val();
+    const value = $("#memo").val();
+    // ユーザーが入力したキーとユニークな識別子を組み合わせます。
+    const storageKey = "memo_" + displayKey + "_" + Date.now();
+    localStorage.setItem(storageKey, value);
+    displayCard(displayKey, value, storageKey);
+    $("#key").val("");
+    $("#memo").val("");
+  });
+
+  // メモ削除ボタンのクリックイベント
+  $("#clear").on("click", function() {
+    // 'memo_'で始まるキーを持つアイテムのみをクリア
+    Object.keys(localStorage)
+      .filter(key => key.startsWith("memo_"))
+      .forEach(key => {
+        localStorage.removeItem(key);
+        $(`#${key}`).remove(); // 画面からカードを削除
+      });
+  });
+
+  // ページ読み込み時にメモデータを表示
+  Object.keys(localStorage)
+    .filter(key => key.startsWith("memo_"))
+    .forEach(storageKey => {
+      const value = localStorage.getItem(storageKey);
+      // キーからユーザーが入力した部分を取り出す
+      const displayKey = storageKey.split("_", 3).slice(1).join("_");
+      displayCard(displayKey, value, storageKey);
+  });
+});
+
+
+</script>
+  
+</body>
+</html>

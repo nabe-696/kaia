@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/finish.css">
+</head>
+<body>
+<h1>あなたの戒名は・・・</h1>
+
+  <main>
+      <div id="container">
+       <img src="img/ihai.png.png" alt="" width="500px">
+       <input type="text" class="finaloutput" id="f1">
+       <input type="text" class="finaloutput" id="f2">
+       <input type="text" class="finaloutput" id="f3">
+       <input type="text" class="finaloutput" id="f4">
+       <input type="text" class="finaloutput" id="f5">
+       <input type="text" class="finaloutput" id="f6">
+      </div>
+  </main>
+
+
+  <a href="index.html" class="modoru">戻る</a>
+
+  <p class="isi">※男性の位号：居士/女性の位号：大姉</p>
+<!-- <img src="img/ihai.png.png" alt="" height="1000px"> -->
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $("#container").fadeIn(6000);
+
+    $(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanlas1 = localStorage.getItem('kanjilistlast1');
+      $('#f1').val(kanlas1);
+    });
+
+    $(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanlas2 = localStorage.getItem('kanjilistlast2');
+      if (kanlas2!== null) {
+      $('#f2').val(kanlas2);
+    }
+    });
+
+    
+    $(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanlas3 = localStorage.getItem('kanjilistlast3');
+      $('#f3').val(kanlas3);
+    });
+
+    $(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanlas4 = localStorage.getItem('kanjilistlast4');
+      $('#f4').val(kanlas4);
+    });
+
+    $(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanlas5 = localStorage.getItem('kanjilistlast5');
+      $('#f5').val(kanlas5);
+    });
+
+    $(document).ready(function() {
+      // ページの読み込み時にlocalStorageから値を取得してテキストフィールドにセット
+      let kanlas6 = localStorage.getItem('kanjilistlast6');
+      $('#f6').val(kanlas6);
+    });
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/kaimyo.css">
+</head>
+<body>
+ 
+
+  <header id="header">
+    <div class="logo">
+      <img src="img/11061.jpg" alt="" width="400px" height="130px">
+
+    </div>
+
+    <nav>
+      <!-- ulでかく -->
+      <ul class="navi">
+
+        <li class="navi-1"><a href="index.html">概要</a></li>  
+        
+        <li class="navi-3"><a href="inn.html">院号</a></li>
+        <li class="navi-2"><a href="way.html">道号</a></li>
+        
+        <li class="navi-4"><a href="kaimyo.html">戒名</a></li>
+        <li class="navi-5"><a href="final.html">最終調整</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <h1>戒名編</h1>
+
+  <div class="taxi_main">
+    <div class="round_1"></div>
+    <h2 class="carol_text">質問に回答して、他の候補の漢字を二つ以上考えてみよう</h2>
+    <h6>メモ帳を活用し、漢字を二つ以上考え、保存してください</h6>
+    
+
+    <ol>
+        <li>(i)座右の銘は何？
+        </li>
+            
+        <li>(ii)好きな言葉、自分にとって大切な言葉を書き出してみよう。
+        </li>
+       
+            <li>(iii)その人の人生観について書き出してみよう。そこから連想される漢字がないか考えてみよう。
+            </li>
+            
+
+            <li>(iv)どのような性格の人だったか、考えてみよう。そこから連想される漢字は何だろうか？
+            </li>
+            
+            <li>(v)日頃大切に考えているのは何だろうか？
+            </li>
+            <input type="text" class="kaimyot" id="kanjikaimyou">
+            <button id="kaimyosend" class="send">保存📧</button>
+    </ol>
+
+  </div>
+
+  <div class="contentall">
+
+  
+    <ul class="content">
+        <li class="item1">
+            <div  class="memoPad">
+                <div>
+                <input type="text" id="key" style="border: none;">
+                </div>  
+                <div>
+                <textarea id="memo" style="border: none;"></textarea>
+                </div>
+                <div class="spc">
+                <button class="addCard" id="save">Save 💾</button>
+                <!-- <button class="addCard" id="clear">Delete 🗑️</button> -->
+                <button class="addCard" id="clear">Delete 🗑️</button>
+                
+    
+            </div>
+         </li>       
+     </ul>
+  
+    </div>
+    
+  <div id="cards" class="cards">
+    <!-- ここに追加データが挿入される -->
+</div>
+
+
+ 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+$(document).ready(function() {
+      // '保存📧'ボタンがクリックされた時のイベントハンドラー
+      $('#kaimyosend').on('click', function() {
+        // テキストフィールドから値を取得
+        let kanjiValuekai = $('#kanjikaimyou').val();
+    
+        // 取得した値をlocalStorageに保存
+        localStorage.setItem('kanjiListValuekai', kanjiValuekai);
+    
+        // 保存が完了したことをユーザーに通知（必要に応じて）
+        alert('保存されましたyo！');
+      });
+    });
+    </script>
+
+
+    <script>
+      let id_array =[];
+        let i = 0;
+  
+        $("#save").on("click",function(){
+        id_array.push(i);
+        i++;
+        // console.log(id_array);
+        let id_num = id_array.length;
+        // console.log(id_num);
+        const key = $("#key").val();
+        const value = $("#memo").val();
+        localStorage.setItem(key,value);
+        const html = `<table class="card" id="${key}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+        $("#cards").append(html);
+        $("#key").val("");
+        $("#memo").val("")
+  
+  
+    });
+  
+  //2.clear クリックイベント
+    $("#clear").on("click",function(){
+      $(".card").each(function() {
+      const cardId = $(this).attr('id');
+      localStorage.removeItem(cardId);
+      $(this).remove();
+    });
+    });
+  
+  
+  
+  //3.ページ読み込み：保存データ取得表示
+  // for(let i=0; i<localStorage.length; i++){
+  //     const key   = localStorage.key(i);
+  //     const value = localStorage.getItem(key);
+  //     const html = `<table class="card" id="card${i}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+  //     $("#cards").append(html);
+  // }
+      
+  for(let i=0; i<localStorage.length; i++){
+    const key = localStorage.key(i);
+    if(key !== 'kanjiListValuekai' ) {
+      const value = localStorage.getItem(key);
+      const html = `<table class="card" id="${key}"><tr class="title"><td>${key}</td></tr><tr class="detail"><td>${value}</td></tr></table>`;
+      $("#cards").append(html);
+    }
+  }
+
+ 
+  
+  </script>
+</body>
+</html>

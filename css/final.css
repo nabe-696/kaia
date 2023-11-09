@@ -1,0 +1,69 @@
+#finalall {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input_all {
+  width: 50px;
+  height: 50px;
+}
+
+.reader_text_2 {
+  padding-left: 70px;
+}
+/* .iro {
+  padding-left: 0px;
+} */
+.a1 {
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+}
+.a2 {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+.a3 {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+.a4 {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+.a5 {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+.a6 {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+#input_1 {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+#input_2 {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+.iro {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+.inra {
+  padding: 0px 0px 0px 10px;
+  margin: 0px;
+}
+li {
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+#kakutei{
+  background-color: rgba(92, 147, 154, 0.333);
+}
+#kakutei:hover{
+  background-color: rgba(45, 53, 79, 0.121);
+}
+.susumu:hover{
+  color: blue;
+}
